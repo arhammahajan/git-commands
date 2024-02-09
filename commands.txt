@@ -1,0 +1,4 @@
+staging area is that part of the working directory which git will track 
+git init : initialise the working directory as a git repository, by default master branch, -b flag to specify branch name 
+git status : status of the git repository
+git add <file>... : adds the supplied file to the staging area
