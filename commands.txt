@@ -7,3 +7,4 @@ git commit : used to commit the changes, -m flag to specify the message(often in
 # git creates a checksum for every commit so it knows when the data has been changed, shows only first 7
 # first add the file to the staging area to track the changes and then commit the tracked changes 
 git diff : shows the difference between the currently tracked changes and the new, untracked changes, --staged shows the difference even if the file has been staged
+git rm <file> : command to remove a file, --cached to remove the cached file
