@@ -3,4 +3,6 @@ git init : initialise the working directory as a git repository, by default mast
 git status : status of the git repository
 git add <file>... : adds the supplied file to the staging area
 git log : gives us the commit history of the current branch
-git commit : used to commit the changes, -m flag to specify the message(often includes issue number resolved)
+git commit : used to commit the changes, -m flag to specify the message(often includes issue number resolved), -a flag with no argument to add and commit simultaneously
+# git creates a checksum for every commit so it knows when the data has been changed, shows only first 7
+# first add the file to the staging area to track the changes and then commit the tracked changes 
