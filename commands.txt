@@ -12,7 +12,7 @@ git rm <file> : command to remove a file, --cached to remove the cached file
 # we use SSH instead of HTTPS to avoid the trouble of logging in repeatedly
 git remote add <origin> : adds the link supplied as a remote repository
 git remote -v : to see the origins 
-git push : is used to upload the local files to a remote repository, takes <origin>(location of repo) and <branch> argument to specify where to push changes -u flag is used to set the supplied branch and origin as upstream (default)
+git push : is used to upload the local files to a remote repository, takes <origin>(location of repo) and <branch> (local branch we want to push) argument to specify where to push changes -u flag is used to set the supplied branch and origin as upstream (default)
 git checkout <branch> : to switch to another branch, takes -b flag to make a new branch, - simply goes to the previous branch 
 git branch : tells us all the branches that exist locally, --all tells us even the remote branches or to add a new branch, -M flag is used to rename a particular/current branch, -d or --delete optional flag to delete the branch 
 git merge : add the contents from one branch to another
