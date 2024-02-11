@@ -3,7 +3,7 @@ git init : initialise the working directory as a git repository, by default mast
 git status : status of the git repository
 git clone : to clone the contents of a remote repository to local repository
 git add <file>... : adds untracked files to the staging area and tracks changes made to existing files
-git log : gives us the commit history of the current branch
+git log : gives us the commit history of the current branch, --pretty=oneline to print each log in one line, --graph shows the commit history in graphical format
 git commit : used to save the changes, -m flag to specify the message(often includes issue number resolved), -m flag to add a description, -a flag with no argument to add and commit simultaneously, -am to specify the message while also adding the file
 # git creates a checksum for every commit so it knows when the data has been changed, shows only first 7 
 # first add the file to the staging area to track the changes and then commit the tracked changes 
@@ -13,13 +13,18 @@ git rm <file> : command to remove a file, --cached to remove the cached file
 git remote add <origin> : adds the link supplied as a remote repository
 git remote -v : to see the origins 
 git push : is used to upload the local files to a remote repository, takes <origin>(location of repo) and <branch> argument to specify where to push changes -u flag is used to set the supplied branch and origin as upstream (default)
-git checkout <branch> : to switch to another branch, takes -b flag to make a new branch 
-git branch : tells us the branch we are currently working on, or to add a new branch, -M flag is used to rename a particular/current branch
+git checkout <branch> : to switch to another branch, takes -b flag to make a new branch, - simply goes to the previous branch 
+git branch : tells us all the branches that exist locally, --all tells us even the remote branches or to add a new branch, -M flag is used to rename a particular/current branch, -d or --delete optional flag to delete the branch 
 git merge : add the contents from one branch to another
-git pull : download the changes from a remote repository
+git pull <origin> <branch> : download the changes from a remote repository, we need to mention the origin and the branch
 git reset : to unstage the added/committed changes from all the files, takes in the file as an optional argument in which we want to undo the change in particular, takes in another optional argument HEAD which represents a particular commit (~n) to go back to or the hash of the commit, --head is another optional argument if we want to get rid of the changes completely
-# tags are version numbers 
+# tags are version numbers, which are used to group a number of commits under a certain release
 git tag : gives us all the tags used, -a for annotated tag, followed by the tag number, -m to give the message 
 git show <tag> : gives us detailed information about the tag specified 
 # tags are branch independent hence only need to be pushed to the origin 
 git push <origin> <tag> : pushes the tag to the origin
+git switch <branch> : similar to checkout, changes to the branch mentioned, -c or --create to create a new branch with the specified name, - as an argument will simply switch to the previous branch 
+# HEAD is the pointer that points to the current branch, and the current branch points to a snapshot (latest/other)  
+# every snapshop has only those files which have been changed 
+# every commit has the changed files as well as a pointer to the parent commit 
+git merge <branch> : merges the contents of the supplied branch to the current branch
